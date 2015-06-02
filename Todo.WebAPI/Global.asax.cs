@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Ninject;
+using Todo.WebAPI.Ninject;
 
 namespace Todo.WebAPI
 {
@@ -14,8 +16,11 @@ namespace Todo.WebAPI
 	{
 		protected void Application_Start()
 		{
-			AreaRegistration.RegisterAllAreas();
+			var kernel = new StandardKernel();
+			GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
+			kernel.Load(new WebApiModule());
 
+			AreaRegistration.RegisterAllAreas();
 			WebApiConfig.Register(GlobalConfiguration.Configuration);
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
