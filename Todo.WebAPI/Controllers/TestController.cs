@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using Todo.WebAPI.Models;
 using Todo.WebAPI.Ninject;
 
 namespace Todo.WebAPI.Controllers

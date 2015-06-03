@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using Moq;
 using Todo.WebAPI.Controllers;
+using Todo.WebAPI.Models;
 using Todo.WebAPI.Ninject;
 
 namespace Todo.Tests

@@ -119,8 +119,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Ninject\ITest.cs" />
+    <Compile Include="Models\ITest.cs" />
     <Compile Include="Ninject\NinjectDependencyResolver.cs" />
+    <Compile Include="Ninject\NinjectDependencyScope.cs" />
+    <Compile Include="Models\Test.cs" />
     <Compile Include="Ninject\WebApiModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -140,7 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

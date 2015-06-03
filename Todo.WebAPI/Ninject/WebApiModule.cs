@@ -1,4 +1,6 @@
 ﻿using Ninject.Modules;
+using Todo.WebAPI.Models;
+
 namespace Todo.WebAPI.Ninject
 {
 	public class WebApiModule : NinjectModule
@@ -6,14 +8,6 @@ namespace Todo.WebAPI.Ninject
 		public override void Load()
 		{
 			Bind<ITest>().To<Test>();
-		}
-
-		public class Test : ITest
-		{
-			public System.Collections.Generic.IEnumerable<string> Tests()
-			{
-				return new[] { "abc", "edf" };
-			}
 		}
 	}
 }
